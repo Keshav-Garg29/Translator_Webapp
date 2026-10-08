@@ -11,6 +11,14 @@ Issues and specs live in the repo's GitHub Issues. See `docs/agents/issue-tracke
 
 Single-context layout (one `CONTEXT.md` + `docs/adr/` at the root). See `docs/agents/domain.md`.
 
+### Git Workflow
+When a ticket is completed:
+1. Create a separate feature branch.
+2. Clean all backlogs and resolve any pending issues.
+3. Commit with a descriptive, professional commit message.
+4. Push the feature branch and merge it into `main` after verification.
+
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
