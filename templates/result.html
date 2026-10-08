@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Result</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; line-height: 1.6; }
+        .result-box { background: #f4f4f4; padding: 20px; border-radius: 8px; border-left: 5px solid #007bff; }
+        .status { font-weight: bold; margin-bottom: 10px; }
+        .status-COMPLETED { color: green; }
+        .status-PENDING, .status-PROCESSING { color: orange; }
+        .status-FAILED { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Your Translation</h1>
+    <div class="status status-{{ status }}">Status: {{ status }}</div>
+
+    {% if status == 'COMPLETED' %}
+    <div class="result-box">
+        <p><strong>Original:</strong><br>{{ source }}</p>
+        <hr>
+        <p><strong>Translation:</strong><br>{{ translation }}</p>
+    </div>
+    {% elif status == 'FAILED' %}
+    <div class="result-box" style="border-left-color: red;">
+        <p>Sorry, your translation failed. Please try again later.</p>
+    </div>
+    {% else %}
+    <div class="result-box">
+        <p>Your translation is still being processed. Please refresh the page in a few moments.</p>
+    </div>
+    {% endif %}
+
+    <p><a href="/">Translate something else</a></p>
+</body>
+</html>

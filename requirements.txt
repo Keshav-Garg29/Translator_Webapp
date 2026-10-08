@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic-settings
+jinja2
+python-multipart
+celery
+redis
+requests
+fastapi-mail

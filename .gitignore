@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv
+venv/
+ENV/
+env/
+
+# Database
+translator.db
+
+# Uploads & Temporary files
+uploads/
+*.translated
+
+# IDEs
+.vscode/
+.idea/
+.claude/
+.scratch/
